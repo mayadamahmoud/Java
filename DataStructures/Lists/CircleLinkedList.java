@@ -10,7 +10,7 @@ public class CircleLinkedList<E> {
             this.next = next;
         }
     }
-
+ //test
     //For better O.O design this should be private allows for better black box design
     private int size;
     //this will point to dummy node;
@@ -32,7 +32,7 @@ public class CircleLinkedList<E> {
     public void append(E value) {
         if (value == null) {
             // we do not want to add null elements to the list.
-            throw new NullPointerException("Cannot add null element to the list");
+            //throw new NullPointerException("Cannot add null element to the list");
         }
         //head.next points to the last element;
         head.next = new Node<E>(value, head);
@@ -42,7 +42,7 @@ public class CircleLinkedList<E> {
     public E remove(int pos) {
         if (pos > size || pos < 0) {
             //catching errors
-            throw new IndexOutOfBoundsException("position cannot be greater than size or negative");
+           // throw new IndexOutOfBoundsException("position cannot be greater than size or negative");
         }
         //we need to keep track of the element before the element we want to remove we can see why bellow.
         Node<E> before = head;
